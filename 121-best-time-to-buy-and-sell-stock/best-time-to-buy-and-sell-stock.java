@@ -18,23 +18,6 @@ class Solution {
     }
 }
 
+//first in array we consider index 0 and 1 if the index 1 is less than 0 then we buy the stocks then we don't  want to buy the stocks after that we have to sell therefor the right pointer is incremented and calculate the maximum of the given max value and prices at right - left it will loop and right pointer is incretmented 
 
 
-
-// class Solution {
-//     public int maxProfit(int[] prices) {
-//         int i=0,j=1;
-//         int max=0;
-//         while(j<prices.length){
-//             if(prices[j]<prices[i]){
-//                 i=j;
-//                 j++;
-//             }
-//             else{
-//             max=Math.max(max,prices[j]-prices[i]);
-//             j++;
-//             }
-//         }
-//         return max;
-//     }
-// }
