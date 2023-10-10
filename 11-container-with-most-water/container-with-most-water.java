@@ -22,38 +22,6 @@ class Solution {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // class Solution {
 //     public int maxArea(int[] height) {
 //         int left = 0;                   // Left pointer starting from the leftmost edge
