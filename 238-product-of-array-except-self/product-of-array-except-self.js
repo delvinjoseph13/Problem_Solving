@@ -2,6 +2,8 @@
  * @param {number[]} nums
  * @return {number[]}
  */
+// TC:O(n)
+// SC:O(n)
 var productExceptSelf = function(nums) {
     let n=nums.length;
     let answer=new Array(n).fill(1);
