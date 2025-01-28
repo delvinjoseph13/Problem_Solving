@@ -10,16 +10,18 @@
  * @return {boolean}
  */
 var isPalindrome = function(head) {
-if (!head || !head.next) {
-        return true; // An empty list or a single-node list is always a palindrome
-    } 
-   let fast=head;
-   let slow=head;
-   while(fast!=null && fast.next!=null){
-    fast=fast.next.next;
-    slow=slow.next
-   }
-    
+    if(!head || !head.next){
+        return true;
+    }
+
+    let fast=head;
+    let slow=head;
+
+    while(fast!=null && fast.next!=null){
+        fast=fast.next.next;
+        slow=slow.next;
+    }
+
     let prev=null;
     let next=null;
     while(slow!=null){
@@ -28,16 +30,16 @@ if (!head || !head.next) {
         prev=slow;
         slow=next;
     }
-    
-    let left=head;
-    let right=prev;
+  let left=head;
+  let right=prev;
 
-    while(right!=null){
-        if(left.val!==right.val){
-            return false;
-        }
-            left=left.next;
-            right=right.next
+  while(right!=null){
+    if(left.val!==right.val){
+        return false;
     }
-    return true;
+    left=left.next;
+    right=right.next;
+  }
+  return true;
+    
 };
