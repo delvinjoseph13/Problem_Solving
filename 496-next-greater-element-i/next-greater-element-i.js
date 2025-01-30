@@ -9,7 +9,7 @@ var nextGreaterElement = function(nums1, nums2) {
 
     for(let num of nums2){
         while(stack.length>0 && stack[stack.length-1]<num){
-        map.set(stack.pop(),num)
+            map.set(stack.pop(),num);
         }
         stack.push(num);
     }
