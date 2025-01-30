@@ -3,23 +3,23 @@
  * @return {boolean}
  */
 var isValid = function(s) {
-const stack=[];
-let map={
-     ')':'(',
-     ']':'[',
-     '}':'{'
-}
+  let stack=[];
+  let map={
+    ')':'(',
+    ']':'[',
+    '}':'{'
+  }  
 
-for(const char of s){
+  for(let char of s){
     if(char in map){
-           if(stack.length && stack[stack.length-1]===map[char]){
+        if(stack.length>0 && stack[stack.length-1]===map[char]){
             stack.pop();
-           }else{
-            return false;
-           }
+        }else{
+            return false
+        }
     }else{
-        stack.push(char)
+        stack.push(char);
     }
-}
-return stack.length===0;
+  }
+  return stack.length===0;
 };
